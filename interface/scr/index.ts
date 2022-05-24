@@ -4,7 +4,7 @@ interface IUsuario {
   cargo: 'funcionario' | 'gerência' | 'coordenação' | 'supervisão';
 }
 
-function redirection(usuario: IUsuario | IAdmin) {
+function redirection(usuario: IUsuario) {
   if(usuario.cargo) {
     // redireciona(usuario.cargo)
   }
