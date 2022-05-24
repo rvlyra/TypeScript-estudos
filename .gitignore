@@ -112,14 +112,14 @@ packages-lock.json
 appteste-ts/packages.json
 appteste-ts/packages-lock.json
 
-./packages.json
-./packages-lock.json
+/packages.json
+/packages-lock.json
 
-./node_modules
+/node_modules
 node_modules/*
-./node_modules
+/node_modules
 node_modules/*
 
-./interface/package-lock.json
-./interface/package.json
+/interface/package-lock.json
+/interface/package.json
 
