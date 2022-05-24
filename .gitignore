@@ -120,6 +120,6 @@ node_modules/*
 /node_modules
 node_modules/*
 
-/interface/package-lock.json
+/interface/package*
 /interface/package.json
 
