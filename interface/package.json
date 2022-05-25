@@ -1,0 +1,25 @@
+{
+  "name": "interface",
+  "version": "1.0.0",
+  "description": "Estudos teóricos e práticos sobre TypeScript",
+  "main": "index.js",
+  
+  "scripts": {
+    "start": "parcel public/index.html",
+    "test": "dev"
+  },
+  "keywords": [
+    "typescript",
+    "node",
+    "frontend",
+    "backend"
+  ],
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.4"
+  },
+  "author": "rvlyra",
+  "license": "MIT"
+}
