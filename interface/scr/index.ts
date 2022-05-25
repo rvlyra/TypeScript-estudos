@@ -18,4 +18,3 @@ class MeuGato implements GatoSomenteLeitura {
 	this.idade = idade;
 	}
 }
-
