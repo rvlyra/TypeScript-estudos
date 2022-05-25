@@ -1,12 +1,20 @@
-interface IUsuario {
-  id: string;
-  email: string;
-  cargo: 'funcionario' | 'gerência' | 'coordenação' | 'supervisão';
+interface Gato {
+	nome: string;
+	idade: number;
+	camaFavorita?: string;
 }
 
-function redirection(usuario: IUsuario) {
-  if(usuario.cargo) {
-    // redireciona(usuario.cargo)
-  }
-  // redireciona para Admin Area Usuario
+type GatoSomenteLeitura = {
+	readonly [k in keyof Gato]-?: Gato[k]; // -? para remover tipos opicionais
+}
+
+class MeuGato implements GatoSomenteLeitura {
+	idade;
+	nome;
+  camaFavorita;
+
+	construct(nome, idade){
+	this.nome = nome;
+	this.idade = idade;
+	}
 }
