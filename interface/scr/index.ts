@@ -1,63 +1,20 @@
-//types (como struct)
-
-interface IAnimal {
-  nome: string;
-  tipo: 'terrestre';
-  domestico: boolean;
-}
-interface IFelino extends IAnimal {
-  visaoNoturna: boolean;
-}
-interface ICanino extends IAnimal {
-  porte: 'pequeno' | 'medio' | 'grande';
+interface Gato {
+	nome: string;
+	idade: number;
+	camaFavorita?: string;
 }
 
-type IDomestico = IFelino | ICanino;
-
-const animal: IDomestico = {
-  domestico: true,
-  nome: 'Cachorro',
-  porte: "medio",
-  tipo: "terrestre", 
+type GatoSomenteLeitura = {
+	readonly [k in keyof Gato]-?: Gato[k]; // -? para remover tipos opicionais
 }
 
-console.log(animal);
-// interfaces //
-/**
-  
- interface IAnimal {
-   nome: string;
-   tipo: 'terrestre' | 'aquático';
-   rugido(alturaDecibeis: number): void;
-  }
-  
-  interface IFelino extends IAnimal {
-    visaoNoturna: boolean;
-  }
-  
-  const animal: IAnimal = {
-    nome: 'Elefante',
-    tipo: 'terrestre',
-    rugido: (alturaDecibeis) => ('${alturaDecibeis}dB')
-  }
-  
-  
-  const felino: IFelino = {
-    nome: 'Gato',
-    tipo: 'terrestre',
-    visaoNoturna: true,
-    rugido: (alturaDecibeis) => ('${alturaDecibeis}dB')
-  }
- */
- // endInfaces //
+class MeuGato implements GatoSomenteLeitura {
+	idade;
+	nome;
+  camaFavorita;
 
-/**
- * 
- function soma(a: number, b: number){
-   return a + b
-  }
-  
-  soma(1, 1)
-  
-  console.log('TypeScript Testes#004');
-  */
+	construct(nome, idade){
+	this.nome = nome;
+	this.idade = idade;
+	}
+}
